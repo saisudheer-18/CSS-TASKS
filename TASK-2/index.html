@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MP3 Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="player-container">
+    <h2>Now Playing: <span><span style="color: red;">Pavan's</span> Favourite Song – Enjoy.... 🎵</span></h2>
+
+    <div class="wave-bars">
+      <div class="bar bar1"></div>
+      <div class="bar bar2"></div>
+      <div class="bar bar3"></div>
+      <div class="bar bar4"></div>
+      <div class="bar bar5"></div>
+    </div>
+
+    <div class="controls">
+      <audio id="myAudio" src="./07 - Yedemaina Sakhi.mp3" controls loop></audio>
+      <button id="playBtn">▶️ Play Music</button>
+    </div>
+  </div>
+
+  <script>
+    const playBtn = document.getElementById('playBtn');
+    const audio = document.getElementById('myAudio');
+
+    playBtn.addEventListener('click', () => {
+      audio.play();
+      playBtn.style.display = "none"; // hide button after playing
+    });
+  </script>
+
+</body>
+</html>
